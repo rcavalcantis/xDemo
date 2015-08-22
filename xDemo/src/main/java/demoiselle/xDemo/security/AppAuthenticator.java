@@ -17,7 +17,7 @@ public class AppAuthenticator extends TokenAuthenticator {
 		final Credentials credentials = Beans.getReference(Credentials.class);
 		final String username = credentials.getUsername();
 
-		if (credentials.getPassword().equals("secret")) {
+		if (credentials.getPassword().equals("demo")) {
 			user = new Principal() {
 
 				@Override

@@ -45,12 +45,24 @@ function findAllOk(data) {
 			}
 		}, {
 			"aTargets" : [ 1 ],
+			"mDataProp" : "name",
+			"mRender" : function(data, type, full) {
+				return '<a href="bookmark-edit.html?id=' + full.id + '">' + full.name + '</a>';
+			}	
+		}, {
+			"aTargets" : [ 2 ],
+			"mDataProp" : "salary",
+			"mRender" : function(data, type, full) {
+				return '<a href="bookmark-edit.html?id=' + full.id + '">' + full.salary + '</a>';
+			}		
+		}, {
+			"aTargets" : [ 3 ],
 			"mDataProp" : "description",
 			"mRender" : function(data, type, full) {
 				return '<a href="bookmark-edit.html?id=' + full.id + '">' + full.description + '</a>';
 			}
 		}, {
-			"aTargets" : [ 2 ],
+			"aTargets" : [ 4 ],
 			"mDataProp" : "link",
 			"mRender" : function(link) {
 				return '<a href="' + link + '" target="_blank">' + link + '</a>';

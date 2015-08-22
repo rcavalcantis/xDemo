@@ -18,19 +18,18 @@ public class BookmarkBC extends DelegateCrud<Bookmark, Long, BookmarkDAO> {
 	@Transactional
 	public void load() {
 		if (findAll().isEmpty()) {
-			insert(new Bookmark("Portal", "http://www.frameworkdemoiselle.gov.br"));
-			insert(new Bookmark("Documentação", "http://demoiselle.sourceforge.net/docs/framework/reference"));
-			insert(new Bookmark("Fórum", "http://pt.stackoverflow.com/tags/demoiselle"));
-			insert(new Bookmark("Lista de usuários", "https://lists.sourceforge.net/lists/listinfo/demoiselle-users"));
-			insert(new Bookmark("Blog oficial", "http://frameworkdemoiselle.wordpress.com"));
-			insert(new Bookmark("Blog experimental", "http://demoisellelab.wordpress.com"));
-			insert(new Bookmark("Repositório", "http://github.com/demoiselle/framework"));
-			insert(new Bookmark("Bug Tracker", "https://demoiselle.atlassian.net"));
-			insert(new Bookmark("Facebook", "http://facebook.com/FrameworkDemoiselle"));
-			insert(new Bookmark("Twitter", "http://twitter.com/fwkdemoiselle"));
-			insert(new Bookmark("Distribuição",
-					"http://search.maven.org/#search%7Cga%7C1%7Cg%3A%22br.gov.frameworkdemoiselle%22"));
-			insert(new Bookmark("Binários", "http://sourceforge.net/projects/demoiselle/files/framework"));
+			insert(new Bookmark("Tim Cook",13233.5,"Apple", "http://www.apple.com"));
+			insert(new Bookmark("Virginia Rometty",12545.76,"IBM", "http://www.ibm.com"));
+			insert(new Bookmark("Tim Armstrong ",4546.56,"AOL", "http://www.aol.com"));
+			insert(new Bookmark("Dennis Crowley",8979.45,"Foursquare", "http://www.foursquare.com"));
+			insert(new Bookmark("Jack Dorsey", 2442.09, "Twitter", "http://www.twitter.com"));
+			insert(new Bookmark("Larry Page", 42344.34, "Google", "http://www.google.com"));
+			insert(new Bookmark("Steve Ballmer", 25434.97,"Microsoft", "http://www.microsoft.com"));
+			insert(new Bookmark("Jeff Bezos",45652.00,"Amazon", "http://www.amazon.com"));
+			insert(new Bookmark("Michael Dell", 34543.43, "DELL", "http://www.dell.com"));
+			insert(new Bookmark("Mark Zuckerberg", 34345.74, "Facebook", "http://www.facebook.com"));
+			insert(new Bookmark("Jack Ma", 24344.54, "Alibaba", "http://www.alibaba.com"));
+			insert(new Bookmark("Marc Benioff", 12334.43, "Sales Force", "http://www.salesforce.com"));
 		}
 	}
 

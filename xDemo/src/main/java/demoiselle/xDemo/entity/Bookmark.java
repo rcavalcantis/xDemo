@@ -25,17 +25,25 @@ public class Bookmark implements Serializable {
 
 	@NotNull
 	@Size(min = 1, message = "{required.field}")
+	private String name;
+	
+	@NotNull
+	@Size(min = 1, message = "{required.field}")
 	private String description;
 
 	@NotNull
 	@Size(min = 1, message = "{required.field}")
 	@Pattern(regexp = "^|([a-zA-Z]+://)(\\w+\\.\\w+)(.+)?$", message = "{invalid.url}")
 	private String link;
+	
+	private Double salary;
 
 	public Bookmark() {
 	}
 
-	public Bookmark(String description, String link) {
+	public Bookmark(String name, Double salario, String description, String link) {
+		this.name = name;
+		this.salary = salario;
 		this.description = description;
 		this.link = link;
 	}
@@ -62,6 +70,22 @@ public class Bookmark implements Serializable {
 
 	public void setLink(String link) {
 		this.link = link;
+	}
+
+	public String getName() {
+		return name;
+	}
+
+	public Double getSalary() {
+		return salary;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
+	public void setSalary(Double salary) {
+		this.salary = salary;
 	}
 
 	@Override

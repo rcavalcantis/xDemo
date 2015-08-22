@@ -16,6 +16,8 @@ $(function() {
 
 	$("#save").click(function() {
 		var data = {
+			name : $("#name").val(),
+			salary : $("#salary").val(),
 			description : $("#description").val(),
 			link : $("#link").val()
 		};
@@ -44,6 +46,8 @@ function loadOk(data) {
 	$("#id-row").show();
 	$("#id-text").html(data.id);
 	$("#id").val(data.id);
+	$("#name").val(data.name);
+	$("#salary").val(data.salary);
 	$("#description").val(data.description);
 	$("#link").val(data.link);
 	$("#delete").show();
