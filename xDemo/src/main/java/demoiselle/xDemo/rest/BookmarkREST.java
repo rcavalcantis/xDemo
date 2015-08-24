@@ -158,6 +158,18 @@ public class BookmarkREST {
 
 		alterarValor(1, 1, sheet, "Listagem dos Dados do Bookmark",style);
 
+		
+		hSSFFont = workbook.createFont();
+        hSSFFont.setBoldweight(HSSFFont.BOLDWEIGHT_BOLD);
+		
+        style = workbook.createCellStyle();
+		style.setFont(hSSFFont);
+
+		alterarValor(3, 1, sheet, "Name", style);
+		alterarValor(3, 2, sheet, "Salary", style);
+		alterarValor(3, 3, sheet, "Description", style);
+		alterarValor(3, 4, sheet, "Link", style);
+
 		List<Bookmark> result = bc.findAll();
 		if (result != null) {
 			int linha = 4;
