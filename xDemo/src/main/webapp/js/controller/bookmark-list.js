@@ -14,6 +14,14 @@ $(function() {
 		location.href = "bookmark-edit.html";
 	});
 
+	$("#relatorio").click(function() {
+		location.href = BookmarkProxy.url + "/gerarRelatorioPDF";
+	});
+
+	$("#relatorioExcel").click(function() {
+		location.href = BookmarkProxy.url + "/gerarRelatorioEXCEL";
+	});
+
 	$("#delete").click(function() {
 		var ids = [];
 
