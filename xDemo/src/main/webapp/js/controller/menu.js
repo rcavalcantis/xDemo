@@ -6,6 +6,7 @@ $(function() {
 			$("#logout").click(function(event) {
 				event.preventDefault();
 				AuthProxy.logout().done(logoutOk);
+				location.href = "login.html";
 			});
 
 			$("#logout").parent().show();
@@ -22,5 +23,5 @@ $(function() {
 
 function logoutOk() {
 	App.auth.clearAuthentication();
-	location.href = "";
+	location.href = "login.html";
 }

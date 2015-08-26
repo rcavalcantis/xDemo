@@ -4,7 +4,7 @@ var App = {
 
 	restoreSavedLocation : function() {
 		var url = sessionStorage.getItem(this.savedLocationKey);
-		location.href = (url ? url : "");
+		location.href = (url ? url : "/bookmark-list");
 	},
 
 	saveLocation : function(url) {
@@ -49,6 +49,8 @@ var App = {
 		clearAuthentication : function() {
 			sessionStorage.removeItem(this.userKey);
 			sessionStorage.removeItem(this.tokenKey);
+			App.saveLocation(location.href);
+			location.href = "login.html";
 		},
 
 		setHeader : function(request) {
