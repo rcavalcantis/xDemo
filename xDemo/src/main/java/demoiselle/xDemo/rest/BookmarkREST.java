@@ -175,7 +175,7 @@ public class BookmarkREST {
 			int linha = 4;
 			for(Bookmark book : result) {
 				alterarValor(linha, 1, sheet, book.getName(), null);
-				alterarValor(linha, 2, sheet, Util.formataValorParaString(book.getSalary(), 2 ), null);
+				alterarValor(linha, 2, sheet, book.getSalary().toString(), null);
 				alterarValor(linha, 3, sheet, book.getDescription(), null);
 				alterarValor(linha, 4, sheet, book.getLink(), null);
 				linha++;
@@ -294,7 +294,7 @@ public class BookmarkREST {
 			for(Bookmark book : result) {
 				sb.append("			<tr>");
 				sb.append("				<td style='font-family:verdana; font-size:14px' width='30%'>" + book.getName() + "</td>");
-				sb.append("				<td style='font-family:verdana; font-size:14px' width='20%'>" + Util.formataValorParaString(book.getSalary(), 2 ) + "</td>");
+				sb.append("				<td style='font-family:verdana; font-size:14px' width='20%'>" + book.getSalary().toString() + "</td>");
 				sb.append("				<td style='font-family:verdana; font-size:14px' width='20%'>" + book.getDescription() + "</td>");
 				sb.append("				<td style='font-family:verdana; font-size:14px' width='30%'>" + book.getLink() + "</td>");
 				sb.append("			</tr>");

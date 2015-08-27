@@ -36,12 +36,12 @@ public class Bookmark implements Serializable {
 	@Pattern(regexp = "^|([a-zA-Z]+://)(\\w+\\.\\w+)(.+)?$", message = "{invalid.url}")
 	private String link;
 	
-	private Double salary;
+	private Number salary;
 
 	public Bookmark() {
 	}
 
-	public Bookmark(String name, Double salario, String description, String link) {
+	public Bookmark(String name, Number salario, String description, String link) {
 		this.name = name;
 		this.salary = salario;
 		this.description = description;
@@ -76,7 +76,7 @@ public class Bookmark implements Serializable {
 		return name;
 	}
 
-	public Double getSalary() {
+	public Number getSalary() {
 		return salary;
 	}
 
@@ -84,7 +84,7 @@ public class Bookmark implements Serializable {
 		this.name = name;
 	}
 
-	public void setSalary(Double salary) {
+	public void setSalary(Number salary) {
 		this.salary = salary;
 	}
 

@@ -5,7 +5,7 @@
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Bookmark List</title>
+<title>GSAN - Listagem Empresas</title>
 <link rel="stylesheet" href="css/bootstrap.min.css">
 <link rel="stylesheet" href="css/bookmark.css">
 <link rel="stylesheet" href="css/datatables.css">
@@ -18,6 +18,7 @@
 			<button id="new" class="btn btn-success">Novo</button>
 			<button id="delete" class="btn btn-danger">Excluir</button>
 			<div align="right" style="width:100%" >
+				<button id="relatorioChart" ><img width="30px" height="30px" src="images/bar_chart.png" alt="Bar Chart"></button>
 				<button id="relatorioExcel" ><img width="30px" height="30px" src="images/excel_icon.png" alt="Relatorio Excel"></button>
 				<button id="relatorio" ><img width="30px" height="30px" src="images/pdf_icon.png" alt="Relatorio Pdf"></button>
 			</div>
@@ -27,14 +28,15 @@
 		<table id="resultList" class="datatable table table-striped table-bordered">
 			<thead>
 				<tr>
-					<th width="3px"></th>
-					<th>Name</th>
-					<th>Salary</th>
-					<th>Description</th>
-					<th>Link</th>
+					<th width="3px" align="center"></th>
+					<th width="60px">Raz&atilde;o Social </th>
+					<th width="30px">Localidade</th>
+					<th width="60px">Site</th>
+					<th width="10px">Quantidade de Funcion&aacute;rios</th>
 				</tr>
 			</thead>
 		</table>
+		<canvas id="myChart" width="400" height="400"></canvas>
 	</div>
 	<p class="demoiselle">
 		Exemplo Demoiselle <span id="demoiselle-version"></span>
@@ -51,5 +53,6 @@
 	<script type="text/javascript" src="js/proxy/bookmark.js"></script>
 	<script type="text/javascript" src="js/controller/menu.js"></script>
 	<script type="text/javascript" src="js/controller/bookmark-list.js"></script>
+	<script type="text/javascript" src="js/chart/Chart.js"></script>
 </body>
 </html>

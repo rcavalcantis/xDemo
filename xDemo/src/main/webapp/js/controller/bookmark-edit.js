@@ -1,6 +1,6 @@
 $(function() {
 	$("#delete").hide();
-	$("#description").focus();
+	$("#name").focus();
 
 	if (id = App.getUrlParameterByName('id')) {
 		BookmarkProxy.load(id).done(loadOk).fail(loadFail);

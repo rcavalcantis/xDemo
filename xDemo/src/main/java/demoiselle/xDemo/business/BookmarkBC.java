@@ -18,18 +18,18 @@ public class BookmarkBC extends DelegateCrud<Bookmark, Long, BookmarkDAO> {
 	@Transactional
 	public void load() {
 		if (findAll().isEmpty()) {
-			insert(new Bookmark("Tim Cook",13233.5,"Apple", "http://www.apple.com"));
-			insert(new Bookmark("Virginia Rometty",12545.76,"IBM", "http://www.ibm.com"));
-			insert(new Bookmark("Tim Armstrong ",4546.56,"AOL", "http://www.aol.com"));
-			insert(new Bookmark("Dennis Crowley",8979.45,"Foursquare", "http://www.foursquare.com"));
-			insert(new Bookmark("Jack Dorsey", 2442.09, "Twitter", "http://www.twitter.com"));
-			insert(new Bookmark("Larry Page", 42344.34, "Google", "http://www.google.com"));
-			insert(new Bookmark("Steve Ballmer", 25434.97,"Microsoft", "http://www.microsoft.com"));
-			insert(new Bookmark("Jeff Bezos",45652.00,"Amazon", "http://www.amazon.com"));
-			insert(new Bookmark("Michael Dell", 34543.43, "DELL", "http://www.dell.com"));
-			insert(new Bookmark("Mark Zuckerberg", 34345.74, "Facebook", "http://www.facebook.com"));
-			insert(new Bookmark("Jack Ma", 24344.54, "Alibaba", "http://www.alibaba.com"));
-			insert(new Bookmark("Marc Benioff", 12334.43, "Sales Force", "http://www.salesforce.com"));
+			insert(new Bookmark("Apple",3233,"Vale do Silício", "http://www.apple.com"));
+			insert(new Bookmark("IBM",8903,"Hilston", "http://www.ibm.com"));
+			insert(new Bookmark("AOL",6340,"Chicago", "http://www.aol.com"));
+			insert(new Bookmark("Foursquare",350,"Detroit", "http://www.foursquare.com"));
+			insert(new Bookmark("Twitter", 1403, "Boston", "http://www.twitter.com"));
+			insert(new Bookmark("Google Inc", 7930, "California", "http://www.google.com"));
+			insert(new Bookmark("Microsoft", 25434,"Michigan", "http://www.microsoft.com"));
+			insert(new Bookmark("Amazon",4565,"Nova York", "http://www.amazon.com"));
+			insert(new Bookmark("Dell", 3454, "Arizona", "http://www.dell.com"));
+			insert(new Bookmark("Facebook", 3434, "California", "http://www.facebook.com"));
+			insert(new Bookmark("Alibaba", 24344, "Hong Kong", "http://www.alibaba.com"));
+			insert(new Bookmark("Sales Force", 1233, "Paris", "http://www.salesforce.com"));
 		}
 	}
 
