@@ -4,7 +4,10 @@ var App = {
 
 	restoreSavedLocation : function() {
 		var url = sessionStorage.getItem(this.savedLocationKey);
-		location.href = (url ? url : "/bookmark-list");
+		//alert(getToken());
+		location.href = (url ? url : "home.html?date=" + new Date().getTime()
+				//+ "&token=" + this.auto.getToken()
+				);
 	},
 
 	saveLocation : function(url) {

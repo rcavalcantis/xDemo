@@ -3,12 +3,14 @@ package demoiselle.xDemo.rest;
 import java.security.Principal;
 
 import javax.inject.Inject;
+import javax.servlet.http.HttpServletRequest;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
 import javax.ws.rs.Consumes;
 import javax.ws.rs.POST;
 import javax.ws.rs.Path;
 import javax.ws.rs.Produces;
+import javax.ws.rs.core.Context;
 
 import br.gov.frameworkdemoiselle.security.Credentials;
 import br.gov.frameworkdemoiselle.security.LoggedIn;
@@ -27,20 +29,27 @@ public class AuthREST {
 	@ValidatePayload
 	@Consumes("application/json")
 	@Produces("application/json")
-	public Principal login(CredentialsBody body) {
+	public Principal login(@Context HttpServletRequest request, CredentialsBody body) {
 		Credentials credentials = Beans.getReference(Credentials.class);
 		credentials.setUsername(body.username);
 		credentials.setPassword(body.password);
 
+
 		securityContext.login();
-		return securityContext.getUser();
+
+		Principal  principal = securityContext.getUser();
+		
+		request.getSession().setAttribute("principal", principal.getName());
+		
+		return principal;
 	}
 
 	@POST
 	@LoggedIn
 	@Path("logout")
 	@ValidatePayload
-	public void logout() {
+	public void logout(@Context HttpServletRequest request) {
+		request.getSession().setAttribute("principal", null);
 		securityContext.logout();
 	}
 
