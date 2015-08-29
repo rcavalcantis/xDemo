@@ -88,9 +88,9 @@ public class BookmarkBC extends DelegateCrud<Bookmark, Long, BookmarkDAO> {
 		style.setFont(hSSFFont);
 
 		alterarValor(3, 1, sheet, "Name", style);
-		alterarValor(3, 2, sheet, "Salary", style);
-		alterarValor(3, 3, sheet, "Description", style);
-		alterarValor(3, 4, sheet, "Link", style);
+		alterarValor(3, 2, sheet, "Localidade", style);
+		alterarValor(3, 3, sheet, "Site", style);
+		alterarValor(3, 4, sheet, "Quantidade de Funcionários", style);
 
 		List<Bookmark> result = this.getDelegate().findAll();
 		if (result != null) {
@@ -190,23 +190,19 @@ public class BookmarkBC extends DelegateCrud<Bookmark, Long, BookmarkDAO> {
 		sb.append("		<table border='0' cellspacing='0' width='100%' height='40'>");
 		sb.append("			<tr bgcolor='#EFF8FB'>");
 		sb.append("				<td bgcolor='#EFF8FB' style='font-family:verdana; font-size:16px'> Nome </td>");
-		sb.append("				<td bgcolor='#EFF8FB' style='font-family:verdana; font-size:16px'> Salário </td>");
-		sb.append("				<td bgcolor='#EFF8FB' style='font-family:verdana; font-size:16px'> Descricao </td>");
-		sb.append("				<td bgcolor='#EFF8FB' style='font-family:verdana; font-size:16px'> Link </td>");
+		sb.append("				<td bgcolor='#EFF8FB' style='font-family:verdana; font-size:16px'> Localidade </td>");
+		sb.append("				<td bgcolor='#EFF8FB' style='font-family:verdana; font-size:16px'> Site </td>");
+		sb.append("				<td bgcolor='#EFF8FB' style='font-family:verdana; font-size:16px'> Quantidade de Funcionários</td>");
 		sb.append("			</tr>");
 
 		List<Bookmark> result = this.getDelegate().findAll();
 		if (result != null) {
 			for (Bookmark book : result) {
 				sb.append("			<tr>");
-				sb.append("				<td style='font-family:verdana; font-size:14px' width='30%'>"
-						+ book.getName() + "</td>");
-				sb.append("				<td style='font-family:verdana; font-size:14px' width='20%'>"
-						+ book.getSalary().toString() + "</td>");
-				sb.append("				<td style='font-family:verdana; font-size:14px' width='20%'>"
-						+ book.getDescription() + "</td>");
-				sb.append("				<td style='font-family:verdana; font-size:14px' width='30%'>"
-						+ book.getLink() + "</td>");
+				sb.append("				<td style='font-family:verdana; font-size:14px' width='30%'>" + book.getName() + "</td>");
+				sb.append("				<td style='font-family:verdana; font-size:14px' width='20%'>" + book.getDescription() + "</td>");
+				sb.append("				<td style='font-family:verdana; font-size:14px' width='30%'>" + book.getLink() + "</td>");
+				sb.append("				<td style='font-family:verdana; font-size:14px' width='20%'>" + book.getSalary().toString() + "</td>");
 				sb.append("			</tr>");
 			}
 		}
