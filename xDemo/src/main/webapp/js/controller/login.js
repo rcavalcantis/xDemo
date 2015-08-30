@@ -22,8 +22,8 @@ $(function() {
 function loginOk(data, textStatus, jqXHR) {
 	App.auth.setToken(jqXHR.getResponseHeader('Set-Token'));
 	App.auth.setLoggedInUser(data);
-
 	App.restoreSavedLocation();
+	location.href = "home.html";
 }
 
 function loginFail(jqXHR) {
