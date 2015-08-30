@@ -97,9 +97,9 @@ public class BookmarkBC extends DelegateCrud<Bookmark, Long, BookmarkDAO> {
 			int linha = 4;
 			for (Bookmark book : result) {
 				alterarValor(linha, 1, sheet, book.getName(), null);
-				alterarValor(linha, 2, sheet, book.getSalary().toString(), null);
 				alterarValor(linha, 3, sheet, book.getDescription(), null);
 				alterarValor(linha, 4, sheet, book.getLink(), null);
+				alterarValor(linha, 2, sheet, book.getSalary().toString(), null);
 				linha++;
 			}
 		}
@@ -151,7 +151,7 @@ public class BookmarkBC extends DelegateCrud<Bookmark, Long, BookmarkDAO> {
 	private StringBuilder gerarHtmlPDF(String contexto) {
 
 		String logoGsan = contexto + "/images/logo_gsan.png";
-		String logoCompesa = contexto + "/images/logo_compesa.png";
+		String logoCompesa = contexto + "/images/cagepa.png";
 
 		StringBuilder sb = new StringBuilder();
 		sb.append("<html>");
@@ -175,8 +175,7 @@ public class BookmarkBC extends DelegateCrud<Bookmark, Long, BookmarkDAO> {
 		sb.append("					<table border='0' width='100%' height='100%'>");
 		sb.append("						<tr>");
 		sb.append("							<td valign='top'>");
-		sb.append("								<img width='80pt' height='50pt' border='0' src='"
-				+ logoCompesa + "'/>");
+		sb.append("								<img width='128pt' height='45pt' border='0' src='" + logoCompesa + "'/>");
 		sb.append("							</td>");
 		sb.append("						</tr>");
 		sb.append("					</table>");
