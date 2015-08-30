@@ -4044,7 +4044,7 @@ textarea.input-group-sm>.form-control, textarea.input-group-sm>.input-group-addo
 
 .navbar-brand {
 	float: left;
-	padding: 2px;
+	padding: 0px;
 	font-size: 18px;
 	line-height: 20px;
 	height: 50px
